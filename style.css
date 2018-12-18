@@ -21,7 +21,7 @@ p {
   display: block;
   margin-bottom: 1px;
   border-radius: 50%;
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   /* margin: auto; */
@@ -219,7 +219,7 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: lightblue;
+  color: #455d36;
   background-color: white;
   font-size: 15px;
   padding: 8px 12px;
@@ -309,4 +309,59 @@ img {vertical-align: middle;}
   border-radius:8px;
   width: 0;
   text-align: right;
+}
+
+/* slideshow 2 */
+/*width is height, height is width because we rotate it 90 degree*/
+.slider-background{ /*background*/
+  background:white;
+  height: 300px;
+}
+
+.horizontal-scroll-wrapper {
+  font-size: 13px;
+  width: 300px;
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-200px);; /*rotate it to become horizontal scroll. the translateY is padding left outside*/
+  transform-origin: right top;
+  padding-top: 10px; /* left of the slider*/
+}
+
+.horizontal-scroll-wrapper > div {
+  width: 250px;
+  height: 250px;
+  border: 2px white;
+  transform: rotate(90deg); /*rotate the content to become upright again */
+  transform-origin: right top;
+  background: white;
+  overflow: auto;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar{ /*to hide scrollbar*/
+  display: none;
+}
+
+.horizontal-scroll-wrapper img{
+  margin: 1px 0;
+  width: 235px;
+}
+
+.horizontal-scroll-wrapper p,h3{ /*font size*/
+  margin: 0.5em 0.5em;
+}
+
+.horizontal-scroll-wrapper a{
+  color: #222;
+  text-decoration: none;
+}
+
+.horizontal-scroll-wrapper a:visited{
+  color: #222;
+  text-decoration: none;
+}
+
+.horizontal-scroll-wrapper a:hover{
+  color: #5860a2;
 }

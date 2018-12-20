@@ -47,7 +47,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  height: auto;
+   height: auto;
+   /* width: auto\9; /* ie8 */ */
 }
 
 .banner {
@@ -163,13 +164,15 @@ footer {
   transition: max-height 0.2s ease-out;
 }
 
+#edu {
+    border: 2px solid pink;
+}
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 30%;
   margin: 5px;
-  padding: 10px;
-  border: 1px solid pink;
+  padding: 5px;
 }
 
 /* Clear floats after the columns */
@@ -184,6 +187,16 @@ footer {
   .column {
     width: 100%;
   }
+}
+
+/* Style the counter cards */
+#contribution .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height: 550px;
+  position: inherit;
+  text-align: center;
+  background-color: #f1f1f1;
 }
 
 /* dropdown */
@@ -278,40 +291,6 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
-/* skill */
-
-.allskill{
-  margin-top: 30px;
-}
-
-.skill{
-  margin: 5px auto;
-  width: 70%;
-  padding-top: 15px;
-}
-
-.skill label{
-  float: left;
-
-}
-
-
-.containerout,.containerout:hover
-{
-  margin-left: 150px;
-  color:#000;
-  background-color:#f1f1f1;
-  border-radius:8px;
-}
-
-.containerin, .containerin:hover{
-  padding:0.01em 16px;
-  color:#fff;
-  background-color:#2b989e;
-  border-radius:8px;
-  width: 0;
-  text-align: right;
-}
 
 /* slideshow 2 */
 /*width is height, height is width because we rotate it 90 degree*/
@@ -328,7 +307,7 @@ img {vertical-align: middle;}
   overflow-x: hidden;
   transform: rotate(-90deg) translateY(-200px);; /*rotate it to become horizontal scroll. the translateY is padding left outside*/
   transform-origin: right top;
-  padding-top: 10px; /* left of the slider*/
+  padding-top: 5px; /* left of the slider*/
 }
 
 .horizontal-scroll-wrapper > div {
